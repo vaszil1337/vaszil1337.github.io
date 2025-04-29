@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autókezelő - Autó szerkesztése</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Autó szerkesztése</h1>
+    <form id="car-form">
+        <div class="form-group">
+            <label for="brand">Márka:</label>
+            <input type="text" id="brand" name="brand" required>
+        </div>
+        <div class="form-group">
+            <label for="model">Modell:</label>
+            <input type="text" id="model" name="model" required>
+        </div>
+        <div class="form-group">
+            <label for="fuelUse">Üzemanyag-fogyasztás:</label>
+            <input type="number" id="fuelUse" name="fuelUse" step="0.01" min="1" max="99" required>
+        </div>
+        <div class="form-group">
+            <label for="owner">Tulajdonos:</label>
+            <input type="text" id="owner" name="owner" required>
+        </div>
+        <div class="form-group">
+            <label for="dayOfCommission">Üzembe helyezés dátuma:</label>
+            <input type="date" id="dayOfCommission" name="dayOfCommission" required>
+        </div>
+        <div class="form-group">
+            <label for="electric">Elektromos:</label>
+            <input type="checkbox" id="electric" name="electric">
+        </div>
+        <button type="submit" class="btn btn-primary">Mentés</button>
+        <button type="button" id="cancel-btn" class="btn btn-secondary">Mégse</button>
+    </form>
+    <script src="navigation.js"></script>
+    <script src="api.js"></script>
+    <script src="car-edit.js"></script>
+</body>
+</html>

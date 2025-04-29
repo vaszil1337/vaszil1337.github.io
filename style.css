@@ -1,0 +1,226 @@
+/* Alapstílusok */
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #1e272e;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #D1F8EF;
+}
+
+h1, h2, h3, h4 {
+    color: #3674B5;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Kártya stílus */
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card .btn {
+    margin-bottom: 10px;
+}
+
+.card .btn:last-child {
+    margin-bottom: 0;
+}
+
+/* Gombok */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+    width: auto;
+    height: 48px;
+    line-height: 1.2;
+}
+
+.btn-primary {
+    background-color: #3674B5;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #578FCA;
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background-color: #A1E3F9;
+    color: #3674B5;
+}
+
+.btn-secondary:hover {
+    background-color: #578FCA;
+    color: white;
+    transform: scale(1.05);
+}
+
+.btn-danger {
+    background-color: #E84118;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #C23616;
+    transform: scale(1.05);
+}
+
+/* Actions gombok */
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.actions .btn {
+    flex: 1 1 auto;
+    min-width: 100px;
+}
+
+/* Űrlap stílusok */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #3674B5;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #A1E3F9;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #3674B5;
+    box-shadow: 0 0 8px rgba(54, 116, 181, 0.5);
+    outline: none;
+}
+
+/* Checkbox stílus */
+.form-group input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+    margin-right: 10px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Navigáció */
+.navbar {
+    background-color: #3674B5;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #A1E3F9;
+}
+
+/* Reszponzív design */
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+        height: 44px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar a {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        height: 40px;
+        font-size: 0.9rem;
+    }
+}
